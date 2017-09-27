@@ -1,8 +1,4 @@
 terragrunt = {
-    terraform {
-        source  = "github.com/sverch/terraform-modules//base_vpc?ref=master"
-    }
-
     # Configure Terragrunt to automatically store tfstate files in an S3 bucket
     remote_state {
         backend = "s3"
@@ -15,6 +11,3 @@ terragrunt = {
         }
     }
 }
-
-region = "us-east-1"
-cidr_block = "10.1.0.0/16"
