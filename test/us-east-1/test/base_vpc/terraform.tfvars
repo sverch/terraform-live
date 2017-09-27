@@ -2,6 +2,11 @@ terragrunt = {
     terraform {
         source  = "github.com/sverch/terraform-modules//base_vpc?ref=master"
     }
+
+    # Include all settings from the root terraform.tfvars file
+    include = {
+        path = "${find_in_parent_folders()}"
+    }
 }
 
 region = "us-east-1"
