@@ -7,7 +7,7 @@ terragrunt = {
             bucket = "sverch-test-terraform-state-${get_aws_account_id()}"
             key = "${path_relative_to_include()}/terraform.tfstate"
             region = "us-east-1"
-            lock_table = "terraform-locks"
+            dynamodb_table = "terraform-locks"
         }
     }
 }
