@@ -11,7 +11,7 @@ end
 
 describe security_group(env_name) do
   it { should exist }
-  its(:group_name) { should eq env_name }
+  its(:group_name) { should eq 'base' }
   its(:inbound) { should be_opened.protocol('all').for('0.0.0.0/0') }
   its(:outbound) { should be_opened.protocol('all').for('0.0.0.0/0') }
   its(:inbound_rule_count) { should eq 1 }
