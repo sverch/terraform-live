@@ -13,5 +13,5 @@ terragrunt = {
     }
 }
 
-env_name = "test"
+env_name = "testenv"
 region = "us-east-1"
