@@ -1,6 +1,6 @@
 terragrunt = {
     terraform {
-        source  = "github.com/sverch/terraform-modules//base_security_groups?ref=master"
+        source  = "github.com/sverch/terraform-modules//example_security_groups?ref=master"
     }
 
     # Include all settings from the root terraform.tfvars file
@@ -9,9 +9,9 @@ terragrunt = {
     }
 
     dependencies {
-        paths = ["../base_vpc"]
+        paths = ["../example_vpc"]
     }
 }
 
-env_name = "testenv"
-region = "us-east-1"
+environment_name = "testenv"
+aws_region = "us-east-1"

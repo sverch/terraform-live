@@ -1,6 +1,6 @@
 terragrunt = {
     terraform {
-        source  = "github.com/sverch/terraform-modules//base_vpc?ref=master"
+        source  = "github.com/sverch/terraform-modules//example_vpc?ref=master"
     }
 
     # Include all settings from the root terraform.tfvars file
@@ -9,6 +9,6 @@ terragrunt = {
     }
 }
 
-env_name = "testenv"
-region = "us-east-1"
+environment_name = "testenv"
+aws_region = "us-east-1"
 cidr_block = "10.1.0.0/16"
